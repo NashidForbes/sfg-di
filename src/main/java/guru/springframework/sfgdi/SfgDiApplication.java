@@ -4,8 +4,11 @@ import guru.springframework.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+// use component scan for Spring beans outside of Spring context
+@ComponentScan(basePackages={"guru.services", "guru.springframework.sfgdi"})
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
